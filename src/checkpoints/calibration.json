@@ -1,0 +1,39 @@
+{
+  "feedback_history": [
+    {
+      "text": "Charlie Kirk gets assassinated in public.",
+      "predicted_label": "FAKE",
+      "predicted_confidence": 0.501,
+      "actual_label": "REAL",
+      "user_id": "test_user",
+      "timestamp": "2025-10-18T23:17:10.742935"
+    },
+    {
+      "text": "According to Reuters, scientists have discovered a new planet.",
+      "predicted_label": "FAKE",
+      "predicted_confidence": 0.6613,
+      "actual_label": "REAL",
+      "user_id": "test_user",
+      "timestamp": "2025-10-18T23:17:18.196996"
+    }
+  ],
+  "confidence_adjustments": {
+    "FAKE_threshold": 0.52
+  },
+  "word_weights": {
+    "charlie": 0.0,
+    "kirk": 0.0,
+    "gets": 0.0,
+    "assassinated": 0.0,
+    "public": 0.0,
+    "according": 0.0,
+    "reuters": 0.0,
+    "scientists": 0.0,
+    "have": 0.0,
+    "discovered": 0.0,
+    "new": 0.0,
+    "planet": 0.0
+  },
+  "context_patterns": {},
+  "last_updated": "2025-10-18T23:17:18.196996"
+}

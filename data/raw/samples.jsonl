@@ -1,0 +1,2 @@
+{"id": "p1", "text": "Protest in London today", "image_path": "images/img1.jpg", "label": 1, "timestamp": "2025-08-01T10:00:00Z", "source": "@newsA"}
+{"id": "p2", "text": "Massive flood in Mumbai", "image_path": "images/img2.jpg", "label": 0, "timestamp": "2025-08-01T11:00:00Z", "source": "@random"}
