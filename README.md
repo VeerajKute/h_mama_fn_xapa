@@ -290,10 +290,6 @@ black src/ frontend.py
 flake8 src/ frontend.py
 ```
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **DistilBERT**: For efficient text encoding
@@ -301,12 +297,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **FastAPI**: For robust API framework
 - **Streamlit**: For interactive web interface
 - **PyTorch**: For deep learning framework
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-repo/discussions)
-- **Documentation**: [Wiki](https://github.com/your-repo/wiki)
 
 ## 🔮 Roadmap
 
