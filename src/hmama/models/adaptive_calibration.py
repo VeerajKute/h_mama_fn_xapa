@@ -22,11 +22,13 @@ class AdaptiveCalibration:
         self.confidence_adjustments = {}
         self.word_weights = defaultdict(float)
         self.context_patterns = defaultdict(list)
-        self.load_calibration_data()
         
-        # Setup logging
+        # Setup logging first
         logging.basicConfig(level=logging.INFO)
         self.logger = logging.getLogger(__name__)
+        
+        # Then load calibration data
+        self.load_calibration_data()
     
     def load_calibration_data(self):
         """Load existing calibration data"""
@@ -161,7 +163,7 @@ class AdaptiveCalibration:
         
         if similar_confidence:
             error_rate = sum(1 for f in similar_confidence 
-                           if f['predicted_label'] != f['actual_label']) / len(similar_confidence)
+                        if f['predicted_label'] != f['actual_label']) / len(similar_confidence)
             uncertainty = error_rate * 0.2  # Convert error rate to uncertainty
         else:
             uncertainty = 0.1  # Default uncertainty
@@ -177,7 +179,7 @@ class AdaptiveCalibration:
         
         # Calculate accuracy
         correct = sum(1 for f in recent_feedback 
-                     if f['predicted_label'] == f['actual_label'])
+                    if f['predicted_label'] == f['actual_label'])
         accuracy = correct / len(recent_feedback)
         
         # Calculate confidence calibration
@@ -205,9 +207,9 @@ class AdaptiveCalibration:
         recent_feedback = list(self.feedback_history)[-100:]
         if recent_feedback:
             fake_errors = [f for f in recent_feedback 
-                          if f['predicted_label'] == 'FAKE' and f['actual_label'] == 'REAL']
+                        if f['predicted_label'] == 'FAKE' and f['actual_label'] == 'REAL']
             real_errors = [f for f in recent_feedback 
-                          if f['predicted_label'] == 'REAL' and f['actual_label'] == 'FAKE']
+                        if f['predicted_label'] == 'REAL' and f['actual_label'] == 'FAKE']
             
             if len(fake_errors) > len(real_errors) * 2:
                 recommendations.append("Model is too aggressive in predicting FAKE. Consider adjusting thresholds.")
